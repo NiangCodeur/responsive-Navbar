@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+header {
+  background-image: url(bg.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 6%;
+}
+.logo h2 {
+  font-size: 35px;
+  font-weight: 900;
+  color: #fff;
+}
+.logo span {
+  color: #11beed;
+  font-weight: 900;
+}
+.navbar {
+  flex: 1;
+  text-align: right;
+}
+.navbar ul li {
+  position: relative;
+  list-style: none;
+  padding: 8px 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.navbar ul li:hover {
+  background-color: #11beed;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+.active {
+  padding: 8px 12px;
+  background: #11beed;
+}
+nav .fa {
+  display: none;
+}
+/* Rendre ma navbar responsive */
+@media (max-width: 700px) {
+  .navbar ul li {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    background: #11beed;
+    line-height: 30px;
+    right: -200px;
+    top: 0;
+    padding: 40px 20px;
+    transition: 1s;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    font-size: 25px;
+    margin: 10px 20px;
+    cursor: pointer;
+  }
+  nav .fa:nth-child(1) {
+    margin-right: 120px;
+  }
+}
